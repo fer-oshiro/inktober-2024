@@ -1,0 +1,361 @@
+:root {
+  --base-radius: 35px;
+  --color-background: #d5c6b4;
+  --color-secondaty-pocket: #a3aaf1;
+  --color-main: #848ad4;
+  --color-side: #6c70ae;
+  --color-bottom: #22324e;
+  --color-gold: #fff2dd;
+  --top-pencil: 30px;
+
+  background-color: var(--color-background);
+  width: 100vw;
+  height: 100dvh;
+}
+
+.original {
+  margin-top: 10px;
+  padding: 10px;
+}
+.original > img {
+  width: 100px;
+}
+
+.backpack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  margin-top: 50px;
+}
+
+.top-handle {
+  width: 80px;
+  height: 25px;
+  background: var(--color-main);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -25px;
+  border-radius: 10px 10px 0 0;
+}
+
+.top-handle::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 40px;
+  background: var(--color-background);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.top-handle::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 20px;
+  background: var(--color-side);
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.sides {
+  width: 250px;
+  height: 150px;
+  background: var(--color-side);
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  border-radius: 0 0 var(--base-radius) var(--base-radius);
+}
+
+.base {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 300px;
+  background-color: var(--color-main);
+  border-radius: var(--base-radius);
+  z-index: 10;
+  position: relative;
+}
+
+.main-pocket {
+  width: 140px;
+  height: 100px;
+  margin: 0 auto;
+  background: var(--color-side);
+  border-radius: 0 0 var(--base-radius) var(--base-radius);
+}
+
+.bottom {
+  margin-top: auto;
+  width: 100%;
+  height: 50px;
+  background-color: var(--color-bottom);
+  border-radius: 0 0 var(--base-radius) var(--base-radius);
+}
+
+.stripe {
+  position: absolute;
+  width: 25px;
+  height: 300px;
+  transform: translateX(-50%);
+  background: var(--color-bottom);
+}
+
+.stripe-left {
+  left: 30%;
+}
+
+.stripe-right {
+  left: 70%;
+}
+
+.stripe::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80px;
+  position: absolute;
+  border-radius: 10px;
+  border: 10px solid var(--color-gold);
+}
+
+.secondary-pocket {
+  width: 180px;
+  height: 100px;
+  background-color: var(--color-secondaty-pocket);
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+.zipper-chain {
+  width: 150px;
+  height: 8px;
+  margin: 10px auto 0;
+  background-color: var(--color-bottom);
+  animation: animarChain 5s infinite;
+  position: relative;
+}
+
+.zipper {
+  width: 10px;
+  height: 20px;
+  background-color: var(--color-gold);
+  border-radius: 10px;
+  margin-left: 20px;
+  transform: rotate(-20deg);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+  animation: animarMargin 5s infinite;
+  position: absolute;
+  top: 5px;
+  z-index: 30;
+}
+
+@keyframes animarMargin {
+  0% {
+    margin-left: 150px;
+    transform: rotate(-20deg);
+  }
+
+  50% {
+    margin-left: 10px;
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(-20deg);
+    margin-left: 150px;
+  }
+}
+
+.front-pocket {
+  position: absolute;
+  width: 180px;
+  height: 80px;
+  background-color: var(--color-secondaty-pocket);
+  border-radius: 0 0 20px 20px;
+  z-index: 20;
+}
+
+.calculator {
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  left: 30px;
+  background-color: #e9e9e9;
+  border-radius: 10px;
+  top: -30px;
+  animation: calculator 5s infinite;
+}
+.visor {
+  width: 70px;
+  height: 15px;
+  background-color: rgb(28, 67, 56);
+  margin: 10px auto;
+  border-radius: 10px;
+  z-index: 10;
+}
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button:last-child {
+  background-color: red;
+}
+
+.button {
+  width: 15px;
+  height: 10px;
+  background: #3f3f3f;
+  border-radius: 4px;
+}
+
+@keyframes calculator {
+  0% {
+    top: -20px;
+    transform: rotate(-10deg);
+  }
+
+  20% {
+    top: 20px;
+    transform: rotate(0deg);
+  }
+  70% {
+    top: 20px;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    top: -20px;
+    transform: rotate(-10deg);
+  }
+}
+
+.pencil,
+.pencil-1,
+.pencil-2 {
+  position: absolute;
+  width: 8px;
+  height: 50px;
+
+  --pencil-left: 85px;
+
+  left: var(--pencil-left);
+  background-color: #4f43b9;
+  border-radius: 10px;
+}
+
+.pencil::after,
+.pencil-1::after,
+.pencil-2::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 5px;
+  background-color: rgb(192, 26, 26);
+  border-radius: 2px 2px 0 0;
+}
+
+.pencil {
+  animation: pencil 5s infinite;
+}
+
+.pencil-1 {
+  background-color: #c9d08a;
+  animation: pencil1 5s infinite;
+}
+
+.pencil-2 {
+  background-color: #db93cd;
+  animation: pencil2 5s infinite;
+}
+
+@keyframes pencil {
+  0% {
+    top: calc(var(--top-pencil) * -1);
+    transform: rotate(0deg);
+  }
+
+  20% {
+    top: var(--top-pencil);
+    transform: rotate(-20deg);
+  }
+  70% {
+    top: var(--top-pencil);
+    transform: rotate(-20deg);
+  }
+
+  100% {
+    top: calc(var(--top-pencil) * -1);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pencil1 {
+  0% {
+    top: calc(var(--top-pencil) * -0.9);
+    transform: rotate(20deg);
+    left: calc(var(--pencil-left) * 1.2);
+  }
+
+  20% {
+    top: var(--top-pencil);
+    transform: rotate(-20deg);
+    left: calc(var(--pencil-left));
+  }
+  70% {
+    top: var(--top-pencil);
+    transform: rotate(-20deg);
+    left: calc(var(--pencil-left));
+  }
+
+  100% {
+    top: calc(var(--top-pencil) * -0.9);
+    transform: rotate(20deg);
+    left: calc(var(--pencil-left) * 1.2);
+  }
+}
+
+@keyframes pencil2 {
+  0% {
+    top: calc(var(--top-pencil) * -0.6);
+    transform: rotate(40deg);
+    left: calc(var(--pencil-left) * 1.35);
+  }
+
+  20% {
+    top: var(--top-pencil);
+    transform: rotate(-20deg);
+    left: calc(var(--pencil-left));
+  }
+  70% {
+    top: var(--top-pencil);
+    transform: rotate(-20deg);
+    left: calc(var(--pencil-left));
+  }
+
+  100% {
+    top: calc(var(--top-pencil) * -0.6);
+    transform: rotate(40deg);
+    left: calc(var(--pencil-left) * 1.35);
+  }
+}
