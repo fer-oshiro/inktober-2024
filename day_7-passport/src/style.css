@@ -1,0 +1,43 @@
+.passport{
+    width: 300px;
+    height: 500px;
+    background-color: #0e1552;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  border-radius: 40px;
+  animation: alternate 1s infinite;
+
+}
+
+.passport p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fffce0;
+    margin-top: 20px;
+}
+
+.passport div {
+    width: 100px;
+    height: 100px;
+    border-color: #fffce0;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes alternate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+

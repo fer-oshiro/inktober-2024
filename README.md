@@ -14,3 +14,7 @@ Tentando criar algo todo dia, inspirado no [inktober](https://inktober.com/rules
 ## Dia 3 - Boots
 
 [![boots](./day_3-boots/preview.png)](https://codesandbox.io/p/devbox/day-3-boot-x7lchq)
+
+## Dia 7 - Passport
+
+[passport](./day_7-passport/passport.png)
