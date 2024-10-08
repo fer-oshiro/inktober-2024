@@ -17,4 +17,8 @@ Tentando criar algo todo dia, inspirado no [inktober](https://inktober.com/rules
 
 ## Dia 7 - Passport
 
-[passport](./day_7-passport/passport.png)
+[![passport](./day_7-passport/passport.png)]
+
+## Dia 8 - Hike
+
+[![game](./day_8-hike/game.gif)](https://codesandbox.io/p/sandbox/withered-thunder-l2k7fs)
